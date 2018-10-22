@@ -1,0 +1,28 @@
+<div class="container-smart-autocomplete">
+  <p class="dest-list" (click)="readyForInput()">
+    <a *ngFor="let dst of destData;let currentIndex = index;" class="selected-item">
+      <span>{{dst.name}}</span><span>({{dst.id}})</span>
+      <span (click)="deleteItem(destData,currentIndex)" class="icon-clear"><i class="material-icons">clear</i></span>
+    </a>
+    <input type="text" [(ngModel)]="inputModel" class="input" (keyup)="onKeyup($event)" (blur)="blurInput()"
+           #inputField>
+  </p>
+  <ul class="prefix-list" *ngIf="autoCompleteDisplayFlag&&!autoCompleteLoadingFlag&&!hiddenFlag">
+    <ng-container *ngIf="prefixData.length">
+      <li #prefixItems *ngFor="let o of prefixData" [ngClass]="{'active':!!o?.activeFlag}" (click)="addToDestData(o)">
+        <span class="item-name">{{o.name}}</span>
+        <span class="item-id">({{o.id}})</span>
+        <i class="fa fa-level-down fa-lg fa-rotate-90"></i>
+        <span class="tips">{{message.tips}}</span>
+      </li>
+    </ng-container>
+    <ng-container *ngIf="!prefixData.length">
+      <li class="empty-data">{{message.empty}}</li>
+    </ng-container>
+  </ul>
+  <ul class="prefix-list loading-icon" *ngIf="autoCompleteLoadingFlag&&!hiddenFlag">
+    <li><span><i class="fa fa-spinner fa-pulse fa-lg fa-fw"></i>{{message.loading}}</span></li>
+  </ul>
+</div>
+
+

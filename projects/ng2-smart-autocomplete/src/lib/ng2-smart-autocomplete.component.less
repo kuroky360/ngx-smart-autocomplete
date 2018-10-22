@@ -1,0 +1,111 @@
+.container-smart-autocomplete{
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  >.dest-list{
+    border: 1px solid #e6e6e6;
+    padding: 3px;
+    cursor: text;
+    margin: 0;
+    >.selected-item{
+      border: 1px solid #eee;
+      background: #f9f9f9;
+      padding: 2px;
+      display: inline-block;
+      margin-right: 10px;
+      margin-top: 5px;
+      >.icon-clear{
+        color: darkred;
+        &:hover{
+          color: red;
+        }
+        cursor: pointer;
+        margin-left: 10px;
+      }
+    }
+    >input{
+      display: inline-block;
+      vertical-align: middle;
+      border: none;
+    }
+  }
+  >.prefix-list{
+    position: absolute;
+    list-style: none;
+    max-height: 315px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    padding: 0;
+    border: 1px solid #c8c8c8;
+    border-top:none;
+    background-color: #ffffff;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    z-index: 99;
+    &.loading-icon{
+      height: auto;
+      >li{
+        color:gray;
+        &:hover{
+          color: gray;
+          background-color: transparent;
+        }
+      }
+    }
+    >li{
+      font-size: 13px;
+      cursor: pointer;
+      position: relative;
+      >.item-id{
+
+      }
+      >.item-name{
+        margin-left: 10px;
+      }
+      >.tips{
+        color: darkgray;
+        float: right;
+        margin-right: 10px;
+      }
+
+      >i{
+        &.fa-level-down{
+          position:relative;
+          top:5px;
+        }
+        float: right;
+        margin-right: 20px;
+        color: darkgray;
+        display: inline-block;
+      }
+      &.active{
+        background: #5085bd;
+        color:#fff;
+        >i{
+          display: inline-block;
+        }
+      }
+      &:hover{
+        background: #5085bd;
+        color:#fff;
+        >i{
+          display: inline-block;
+        }
+      }
+      &.empty-data{
+        color: darkgray;
+        &:hover{
+          color: darkgray;
+          background-color: transparent;
+        }
+      }
+      padding: 5px 5px 5px 10px;
+      color: #333333;
+      background-color: transparent;
+    }
+  }
+}
