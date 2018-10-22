@@ -31,4 +31,23 @@
   
   2、use it in your template
   
-    <smart-autocomplete [displayData]="myDisplayData" [fetchData]="myPullData" (fetchMethod)="myFetchMethod($event)"></smart-autocomplete>
+    <smart-autocomplete [displayData]="myDisplayData" [fetchData]="myFetchData" (fetchMethod)="myFetchMethod($event)"></smart-autocomplete>
+
+## Attributes
+
+ * **`displayData`**, array, required. Used to save the currently selected data list. Expect such a data format  [ {id:'xx',name:'xx'},... ]
+ * **`fetchData`**, array, required. Data source array,used to save the current real-time pull data list. Expect such a data format [ {id:'xx',name:'xx'},... ]
+ * **`en`**, boolean, optional. If true, the English template is used, otherwise the Chinese template is used, the default is false
+ * **`fetchMethod`**, fn, required. Real-time data pull method, receiving a keyword parameter（$event）(It should be noted that **`fetchData`** should be updated after the data is obtained)
+                        
+## For Developers
+
+  ```sh
+  $ git clone https://github.com/kuroky360/ng2-smart-autocomplete.git
+  $ cd ng2-smart-autocomplete
+  $ npm install
+  $ npm start
+  ```
+### List of available npm tasks
+
+   * `npm run package` : compile and package project

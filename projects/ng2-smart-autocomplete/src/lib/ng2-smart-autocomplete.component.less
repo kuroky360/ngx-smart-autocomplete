@@ -10,10 +10,12 @@
     >.selected-item{
       border: 1px solid #eee;
       background: #f9f9f9;
-      padding: 2px;
+      padding: 5px;
       display: inline-block;
       margin-right: 10px;
-      margin-top: 5px;
+      margin-top: 3px;
+      margin-bottom: 3px;
+
       >.icon-clear{
         color: darkred;
         &:hover{
@@ -21,12 +23,17 @@
         }
         cursor: pointer;
         margin-left: 10px;
+        >i{
+          font-style: normal;
+        }
       }
     }
     >input{
       display: inline-block;
       vertical-align: middle;
       border: none;
+      min-height: 25px;
+      outline:none;
     }
   }
   >.prefix-list{

@@ -2,7 +2,7 @@
   <p class="dest-list" (click)="readyForInput()">
     <a *ngFor="let dst of destData;let currentIndex = index;" class="selected-item">
       <span>{{dst.name}}</span><span>({{dst.id}})</span>
-      <span (click)="deleteItem(destData,currentIndex)" class="icon-clear"><i class="material-icons">clear</i></span>
+      <span (click)="deleteItem(destData,currentIndex)" class="icon-clear"><i class="material-icons">✕</i></span>
     </a>
     <input type="text" [(ngModel)]="inputModel" class="input" (keyup)="onKeyup($event)" (blur)="blurInput()"
            #inputField>
