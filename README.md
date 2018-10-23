@@ -50,4 +50,4 @@
   ```
 ### List of available npm tasks
 
-   * `npm run package` : compile and package project
+   * `npm run package` : build and package project
