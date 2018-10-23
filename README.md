@@ -1,6 +1,16 @@
-# ng2-smart-autocomplete
+# Ng2-Smart-AutoComplete
 
- ng2-smart-autocomplete is a Angular Library which allows the visitor to select an item from a Real-time pull dropdown list when typing something into an input field. Similar to the autocomplete, typeahead and tags input plugins.
+[![npm](https://img.shields.io/npm/dt/ng2-smart-autocomplete.svg)](https://www.npmjs.com/package/ng2-smart-autocomplete)  [![npm](https://img.shields.io/npm/v/ng2-smart-autocomplete.svg)](https://www.npmjs.com/package/ng2-smart-autocomplete) [![NpmLicense](https://img.shields.io/npm/l/ng2-smart-autocomplete.svg)](https://www.npmjs.com/package/ng2-smart-autocomplete)
+
+
+## What is ng2-smart-autocomplete?
+   ng2-smart-autocomplete is a Angular Library which allows the visitor to select an item from a Real-time pull dropdown list when typing something into an input field. Similar to the autocomplete, typeahead and tags input plugins.
+
+## Features
+  * Lightweight
+  * Tag input
+  * Keyboard shortcuts
+  * Dynamic drop-down lists 
 
 ## Install
 
