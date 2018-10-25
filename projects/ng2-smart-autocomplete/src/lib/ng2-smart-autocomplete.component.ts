@@ -8,6 +8,7 @@ import {Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild, V
 export class Ng2SmartAutocompleteComponent implements OnInit {
   @Input() displayData: any;
   @Input() en: any;
+  @Input() maxCount: any;
   @Input() fetchData: any;
   @ViewChild('inputField') inputField: ElementRef;
   @ViewChildren('prefixItems') prefixItems;
@@ -33,8 +34,7 @@ export class Ng2SmartAutocompleteComponent implements OnInit {
     this.inputModel = '';
     this.autoCompleteDisplayFlag = false;
     this.autoCompleteLoadingFlag = false;
-    this.viewportStart = 0;
-    this.viewportEnd = 9;
+    this.doInitViewport();
 
     this.destData = this.displayData || [];
     this.prefixData = [];
@@ -49,10 +49,10 @@ export class Ng2SmartAutocompleteComponent implements OnInit {
       empty: !!this.en ? 'no data' : '抱歉，没有匹配数据',
       tips: !!this.en ? 'press enter' : '按回车'
     };
-
   }
 
   onKeyup(event: KeyboardEvent) {
+    if (this.maxCount && ((this.destData.length + 1) > this.maxCount)) return;
     this.hiddenFlag = false;
     if (event.keyCode == 13) {
       if (this.prefixData.length) {
@@ -94,13 +94,13 @@ export class Ng2SmartAutocompleteComponent implements OnInit {
     let array = this.prefixItems.toArray();
     if (toDown) {
       if (index > this.viewportEnd) {
-        array[index].nativeElement.scrollIntoView(false);
+        array[index].nativeElement.scrollIntoViewIfNeeded(false);
         this.viewportStart += 1;
         this.viewportEnd += 1;
       }
     } else {
       if (index < this.viewportStart) {
-        array[index].nativeElement.scrollIntoView();
+        array[index].nativeElement.scrollIntoViewIfNeeded(false);
         this.viewportStart -= 1;
         this.viewportEnd -= 1;
       }
@@ -108,7 +108,13 @@ export class Ng2SmartAutocompleteComponent implements OnInit {
 
   }
 
+  doInitViewport() {
+    this.viewportStart = 0;
+    this.viewportEnd = 9;
+  }
+
   makeDefaultActiveFlag(data: any) {
+    this.doInitViewport();
     if (!data.length) return data;
     data[0]['activeFlag'] = true;
     return data;
