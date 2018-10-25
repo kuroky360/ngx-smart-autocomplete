@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {Ng2SmartAutocompleteModule} from "ng2-smart-autocomplete";
+import {Ng2SmartAutocompleteModule} from 'ng2-smart-autocomplete';
 
 @NgModule({
   declarations: [
