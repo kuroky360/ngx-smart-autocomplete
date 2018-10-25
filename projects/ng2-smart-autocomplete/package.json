@@ -1,6 +1,6 @@
 {
   "name": "ng2-smart-autocomplete",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "This is a simple example Angular Library published to npm.",
   "keywords" :["Angular","Library","ng2","autocomplete","tags input","multi-select"],
   "author": "yodawang",
