@@ -45,22 +45,22 @@ export class Ng2SmartAutocompleteComponent implements OnInit {
     this.autoCompleteDisplayFlag = true;
     this.autoCompleteLoadingFlag = false;
     this.message = {
-      loading: !!this.en ? 'loading...' : '正在匹配...',
-      empty: !!this.en ? 'no data' : '抱歉，没有匹配数据',
-      tips: !!this.en ? 'press enter' : '按回车'
+      loading: !!this.en ? 'Loading...' : '正在匹配...',
+      empty: !!this.en ? 'No matching data' : '抱歉，没有匹配数据',
+      tips: !!this.en ? 'Press enter' : '按回车'
     };
   }
 
   onKeyup(event: KeyboardEvent) {
     if (this.maxCount && ((this.destData.length + 1) > this.maxCount)) return;
     this.hiddenFlag = false;
-    if (event.keyCode == 13) {
+    if (event.keyCode === 13) {
       if (this.prefixData.length) {
         this.addToDestData(this.findActiveItem(this.prefixData).item);
       }
       return;
     }
-    if (event.keyCode == 40) {
+    if (event.keyCode === 40) {
       if (this.prefixData.length) {
         let currentIndex = this.findActiveItem(this.prefixData).index;
         let max = this.prefixData.length - 1;
@@ -72,7 +72,7 @@ export class Ng2SmartAutocompleteComponent implements OnInit {
       }
       return;
     }
-    if (event.keyCode == 38) {
+    if (event.keyCode === 38) {
       if (this.prefixData.length) {
         let currentIndex = this.findActiveItem(this.prefixData).index;
         if (currentIndex > 0) {
@@ -132,7 +132,7 @@ export class Ng2SmartAutocompleteComponent implements OnInit {
 
   checkIfExist(list: any, item: any) {
     let flag = list.some(obj => {
-      return obj.id == item.id;
+      return obj.id === item.id;
     });
     return flag;
   }

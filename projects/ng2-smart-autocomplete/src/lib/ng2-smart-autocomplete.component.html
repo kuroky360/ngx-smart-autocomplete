@@ -1,7 +1,7 @@
 <div class="container-smart-autocomplete">
   <p class="dest-list" (click)="readyForInput()">
     <a *ngFor="let dst of destData;let currentIndex = index;" class="selected-item">
-      <span>{{dst.name}}</span><span>({{dst.id}})</span>
+      <span>{{dst.name}}</span>
       <span (click)="deleteItem(destData,currentIndex)" class="icon-clear"><i class="material-icons">✕</i></span>
     </a>
     <input type="text" [(ngModel)]="inputModel" class="input" (keyup)="onKeyup($event)" (blur)="blurInput()"
@@ -11,7 +11,6 @@
     <ng-container *ngIf="prefixData.length">
       <li #prefixItems *ngFor="let o of prefixData" [ngClass]="{'active':!!o?.activeFlag}" (click)="addToDestData(o)">
         <span class="item-name">{{o.name}}</span>
-        <span class="item-id">({{o.id}})</span>
         <i class="fa fa-level-down fa-lg fa-rotate-90"></i>
         <span class="tips">{{message.tips}}</span>
       </li>
