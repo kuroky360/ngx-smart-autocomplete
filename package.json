@@ -6,7 +6,7 @@
     "start": "npm run build_lib && ng serve",
     "serve": "ng serve",
     "build": "ng build",
-    "test": "ng test",
+    "test": "npm run build_lib && ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "copy-license": "cp LICENSE dist/ng2-smart-autocomplete",
