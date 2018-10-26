@@ -17,4 +17,4 @@ cache:
     - node_modules
 
 script:
-  -  npm run test --karma-config src/karma.conf.cli.js
+  -  npm run test
