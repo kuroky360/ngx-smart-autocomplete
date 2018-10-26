@@ -1,16 +1,20 @@
-dist: trusty
+language: node_js
+node_js: stable
+
 sudo: false
 
-language: node_js
-node_js:
-  - "8"
+os:
+  - linux
+
+before_script:
+  - npm install
+
+notifications:
+  email: false
 
 cache:
   directories:
-     - ./node_modules
-
-install:
-  - npm install
+    - node_modules
 
 script:
-  - npm run test --karma-config src/karma.conf.ci.js
+  -  ng test --karma-config src/karma.conf.ci.js
