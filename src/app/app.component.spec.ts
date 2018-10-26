@@ -1,8 +1,10 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import {Ng2SmartAutocompleteModule} from 'ng2-smart-autocomplete';
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [Ng2SmartAutocompleteModule],
       declarations: [
         AppComponent
       ],
