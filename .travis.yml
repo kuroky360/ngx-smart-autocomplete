@@ -17,4 +17,4 @@ cache:
     - node_modules
 
 script:
-  -  ng test --karma-config src/karma.conf.ci.js
+  -  npm run test --karma-config src/karma.conf.ci.js
