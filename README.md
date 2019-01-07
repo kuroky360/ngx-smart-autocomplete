@@ -47,12 +47,13 @@
 
 ## Attributes
 
- * **`displayData`**, array, required. Used to save the currently selected data list. Expect such a data format  [ {id:'xx',name:'xx'},... ]
- * **`fetchData`**, array, required. Data source array,used to save the current real-time pull data list. Expect such a data format [ {id:'xx',name:'xx'},... ]
- * **`maxCount`**, number, optional. The maximum number of selected data lists, the default number is unlimited
- * **`en`**, boolean, optional. If true, the English template is used, otherwise the Chinese template is used, the default is false
- * **`fetchMethod`**, fn, required. Real-time data pull method, receiving a keyword parameter（$event）(It should be noted that **`fetchData`** should be updated after the data is obtained)
-                        
+| @Input()/@Output()       | Type                 | Required | Default  | Description                                                                                                                                                                                                                                                                                           |
+| ------------------------ | -------------------- | -------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| displayData              | array                | required | []       | Used to save the currently selected data list. Expect such a data format  [ {id:'xx',name:'xx'},... ]                                                                                                                                                                                                 |
+| fetchData                | array                | required | []       | Data source array,used to save the current real-time pull data list. Expect such a data format [ {id:'xx',name:'xx'},... ]                                                                                                                                                                            |
+| maxCount                 | number               | optional | unlimited| The maximum number of selected data lists, the default number is unlimited.                                                                                                                                                                                                                           |
+| en                       | boolean              | optional | false    | If true, the English template is used, otherwise the Chinese template is used, the default is false.                                                                                                                                                                                                  |         
+| fetchMethod              | fn                   | required | -        | Real-time data pull method, receiving a keyword parameter（$event）(It should be noted that **`fetchData`** should be updated after the data is obtained)                                                                                                                                              |                        
 ## For Developers
 
   ```sh
