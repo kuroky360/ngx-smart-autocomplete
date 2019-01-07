@@ -9,6 +9,7 @@
     "test": "npm run build_lib && ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "compodoc": "compodoc -p projects/ng2-smart-autocomplete/tsconfig.lib.json --theme postmark",
     "copy-license": "cp LICENSE dist/ng2-smart-autocomplete",
     "copy-readme": "cp README.md dist/ng2-smart-autocomplete",
     "copy-files": "npm run copy-license && npm run copy-readme",
