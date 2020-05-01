@@ -2,10 +2,10 @@ import {Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild, V
 
 @Component({
   selector: 'smart-autocomplete',
-  templateUrl: './ng2-smart-autocomplete.component.html',
-  styleUrls: ['./ng2-smart-autocomplete.component.less']
+  templateUrl: './ngx-smart-autocomplete.component.html',
+  styleUrls: ['./ngx-smart-autocomplete.component.less']
 })
-export class Ng2SmartAutocompleteComponent implements OnInit {
+export class NgxSmartAutocompleteComponent implements OnInit {
   @Input() displayData: any;
   @Input() en: any;
   @Input() maxCount: any;

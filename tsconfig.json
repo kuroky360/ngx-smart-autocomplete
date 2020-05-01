@@ -17,11 +17,11 @@
       "dom"
     ],
     "paths": {
-      "ng2-smart-autocomplete": [
-        "dist/ng2-smart-autocomplete"
+      "ngx-smart-autocomplete": [
+        "dist/ngx-smart-autocomplete"
       ],
-      "ng2-smart-autocomplete/*": [
-        "dist/ng2-smart-autocomplete/*"
+      "ngx-smart-autocomplete/*": [
+        "dist/ngx-smart-autocomplete/*"
       ]
     }
   }

@@ -1,12 +1,12 @@
-# Ng2-Smart-AutoComplete
+# Ngx-Smart-AutoComplete
 
 [![Build Status](https://travis-ci.org/kuroky360/ng2-smart-autocomplete.svg?branch=master)](https://travis-ci.org/kuroky360/ng2-smart-autocomplete) [![npm](https://img.shields.io/npm/dt/ng2-smart-autocomplete.svg)](https://www.npmjs.com/package/ng2-smart-autocomplete)  [![npm](https://img.shields.io/npm/v/ng2-smart-autocomplete.svg)](https://www.npmjs.com/package/ng2-smart-autocomplete) [![NpmLicense](https://img.shields.io/npm/l/ng2-smart-autocomplete.svg)](https://www.npmjs.com/package/ng2-smart-autocomplete)
 
 ![ng2-smart-autocomplete-demo](preview.gif)
 
 
-## What is ng2-smart-autocomplete?
-   ng2-smart-autocomplete is a Angular Library which allows the visitor to select an item from a Real-time pull dropdown list when typing something into an input field. Similar to the autocomplete, typeahead and tags input plugins.
+## What is ngx-smart-autocomplete?
+   ngx-smart-autocomplete is a Angular Library which allows the visitor to select an item from a Real-time pull dropdown list when typing something into an input field. Similar to the autocomplete, typeahead and tags input plugins.
 
 ## Features
   * Lightweight
@@ -17,15 +17,15 @@
 ## Install
 
 ```sh
- $ npm install ng2-smart-autocomplete --save
+ $ npm install ngx-smart-autocomplete --save
 ```
 
 ## Usage
   
-  1、import Ng2SmartAutocompleteModule to your AppModule
+  1、import NgxSmartAutocompleteModule to your AppModule
   
   ```sh
-   import { Ng2SmartAutocompleteModule } from 'ng2-smart-autocomplete';
+   import { NgxSmartAutocompleteModule } from 'ngx-smart-autocomplete';
    
    @NgModule({
      declarations: [
@@ -33,7 +33,7 @@
      ],
      imports: [
        BrowserModule,
-       Ng2SmartAutocompleteModule
+       NgxSmartAutocompleteModule
      ],
      providers: [],
      bootstrap: [AppComponent]
@@ -57,8 +57,8 @@
 ## For Developers
 
   ```sh
-  $ git clone https://github.com/kuroky360/ng2-smart-autocomplete.git
-  $ cd ng2-smart-autocomplete
+  $ git clone https://github.com/kuroky360/ngx-smart-autocomplete.git
+  $ cd ngx-smart-autocomplete
   $ npm install
   $ npm start
   ```

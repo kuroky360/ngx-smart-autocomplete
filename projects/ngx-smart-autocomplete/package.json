@@ -1,13 +1,13 @@
 {
-  "name": "ng2-smart-autocomplete",
-  "version": "1.0.14",
+  "name": "ngx-smart-autocomplete",
+  "version": "1.0.15",
   "description": "This is a simple example Angular Library published to npm.",
-  "keywords" :["Angular","Library","ng2","autocomplete","tags input","multi-select"],
+  "keywords" :["Angular","Library","ngx","autocomplete","tags input","multi-select"],
   "author": "yodawang",
   "license":"MIT",
   "repository": {
     "type" : "git",
-    "url" : "https://github.com/kuroky360/ng2-smart-autocomplete.git"
+    "url" : "https://github.com/kuroky360/ngx-smart-autocomplete.git"
   },
   "peerDependencies": {
     "@angular/common": "^6.0.0-rc.0 || ^6.0.0",

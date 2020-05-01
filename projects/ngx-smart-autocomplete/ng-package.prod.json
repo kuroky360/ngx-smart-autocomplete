@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/ng2-smart-autocomplete",
+  "dest": "../../dist/ngx-smart-autocomplete",
   "lib": {
     "entryFile": "src/public_api.ts"
   }
